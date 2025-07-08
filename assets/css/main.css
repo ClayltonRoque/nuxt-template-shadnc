@@ -1,0 +1,28 @@
+@import "tailwindcss";
+
+@source "../../components/";
+
+:root {
+  --color-primary: #047bd4;
+  --color-secondary: #129b93;
+}
+
+@import "./fonts.css";
+
+@import "tw-animate-css";
+
+@custom-variant dark (&:is(.dark *));
+
+/* Exemplo de uso das cores customizadas */
+.bg-primary {
+  background-color: var(--color-primary) !important;
+}
+.text-primary {
+  color: var(--color-primary) !important;
+}
+.bg-secondary {
+  background-color: var(--color-secondary) !important;
+}
+.text-secondary {
+  color: var(--color-secondary) !important;
+}

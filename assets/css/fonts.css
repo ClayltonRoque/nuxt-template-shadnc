@@ -1,0 +1,3 @@
+.text-large {
+  @apply text-2xl font-bold;
+}
