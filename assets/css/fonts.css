@@ -1,3 +1,24 @@
-.text-large {
-  @apply text-2xl font-bold;
+@theme {
+  --font-primary: "Mulish", sans-serif;
+  --font-secondary: "Lato", sans-serif;
+  --leading-normal: 1;
+  --leading-medium: 1.2;
+  --leading-distant: 1.5;
+  --leading-extra-distant: 2;
+  --font-weight-black: 900;
+  --font-weight-extrabold: 800;
+  --font-weight-bold: 700;
+  --font-weight-medium: 500;
+  --font-weight-regular: 400;
+  --font-weight-light: 300;
+  --text-size-h1: 60px;
+  --text-size-h2: 48px;
+  --text-size-h3: 36px;
+  --text-size-h4: 24px;
+  --text-size-h5: 20px;
+  --text-size-h6: 18px;
+  --text-size-h7: 14px;
+  --text-size-h8: 12px;
+  --text-size-h9: 10px;
+  --text-legend: 11px;
 }

@@ -1,0 +1,45 @@
+/* Brand Colors */
+@theme {
+  --color-brand-primary: #047bd4;
+  --color-brand-primary-darkest: #054f84;
+  --color-brand-primary-medium: #98caf0;
+  --color-brand-primary-light: #d3e8f8;
+  --color-brand-primary-lightest: #eff8ff;
+
+  --color-brand-secondary: #129b93;
+  --color-brand-secondary-darkest: #0a6d67;
+  --color-brand-secondary-medium: #15b5ab;
+  --color-brand-secondary-light: #aae5e2;
+  --color-brand-secondary-lightest: #d9f3f2;
+
+  /* Neutral Greys */
+  --color-neutral-grey-900: #0d1628;
+  --color-neutral-grey-800: #1d2639;
+  --color-neutral-grey-700: #313f58;
+  --color-neutral-grey-600: #6f7d9b;
+  --color-neutral-grey-500: #a0abc2;
+  --color-neutral-grey-400: #cdd5e7;
+  --color-neutral-grey-300: #dee4ef;
+  --color-neutral-grey-200: #f1f5fa;
+  --color-neutral-grey-100: #f9fafd;
+  --color-neutral-grey: #fefeff;
+
+  /* Status */
+  --color-danger: #f03434;
+  --color-success: #00af27;
+  --color-warning: #ffa900;
+
+  /* Alternatives */
+  --color-alternative-pink: #e91e63;
+  --color-alternative-purple: #9c27b0;
+  --color-alternative-green: #129b93;
+  --color-alternative-lime: #c0ca33;
+  --color-alternative-orange: #ff5722;
+  --color-alternative-cyan: #00bcd4;
+  --color-alternative-brown: #c78875;
+  --color-alternative-yellow: #e4ae2f;
+}
+
+@utility discipline-* {
+  color: --value(--color-alternative- *);
+}

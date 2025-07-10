@@ -1,0 +1,34 @@
+@theme {
+  --shadow-01: 3px 1px 6px rgba(77, 157, 229, 0.18);
+  --shadow-02: 3px 1px 12px rgba(77, 157, 229, 0.18);
+  --shadow-03: 3px 1px 18px rgba(77, 157, 230, 0.18);
+  --opacity-01: 0.2;
+  --opacity-02: 0.4;
+  --opacity-03: 0.6;
+  --opacity-04: 0.8;
+  --radius-none: 0px;
+  --radius-thin: 1px;
+  --radius-thick: 2px;
+  --radius-tiny: 4px;
+  --radius-small: 10px;
+  --radius-medium: 16px;
+  --radius-heavy: 24px
+  --radius-big: 100%;
+  --gradient-secondary: linear-gradient(180deg, #0d1628 50.52%, #004d88 100%);
+}
+
+@utility shadow-* {
+  box-shadow: --value(--shadow- *);
+}
+
+@utility opacity-* {
+  opacity: --value(--opacity- *);
+}
+
+@utility radius-* {
+  border-radius: --value(--radius- *);
+}
+
+@utility gradient-secondary {
+  background: var(--gradient-secondary);
+}
