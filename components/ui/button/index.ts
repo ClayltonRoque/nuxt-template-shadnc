@@ -3,34 +3,148 @@ import { cva, type VariantProps } from "class-variance-authority";
 export { default as Button } from "./Button.vue";
 
 export const buttonVariants = cva(
-  // Ordem: text, flex, layout, border, bg, shadow, hover, disabled
-  "text-sm font-bold inline-flex items-center justify-center gap-2 px-7 py-2 whitespace-nowrap rounded-3xl cursor-pointer transition-all disabled:pointer-events-none disabled:opacity-50",
+  "button inline-flex items-center justify-center font-medium transition-all focus:outline-none focus:ring-2 focus:ring-offset-2",
   {
     variants: {
       variant: {
         default:
-          "text-black border border-neutral-grey-500/50 shadow-xs hover:border-neutral-grey-800",
+          "bg-white text-gray-700 border border-gray-300 hover:bg-gray-100",
         primary:
-          "text-white bg-brand-primary shadow-xs hover:bg-brand-primary-darkest",
+          "bg-brand-primary text-white border border-brand-primary hover:bg-brand-primary-darkest",
         secondary:
-          "text-white bg-brand-secondary shadow-xs hover:bg-brand-secondary-darkest",
-        outline:
-          "text-brand-primary border border-brand-primary-500/50 shadow-xs bg-transparent hover:bg-brand-primary hover:text-white",
-        ghost: "text-brand-primary hover:bg-neutral-grey-200 px-2",
-        link: "text-brand-primary underline-offset-4 hover:underline",
-        disabled:
-          "text-neutral-grey-400 bg-neutral-grey-200 cursor-not-allowed",
+          "bg-brand-secondary text-white border border-brand-secondary hover:bg-brand-secondary-darkest",
+        success:
+          "bg-success text-white border border-success hover:bg-success-dark",
+        danger:
+          "bg-danger text-white border border-danger hover:bg-danger-dark",
+        warning:
+          "bg-warning text-white border border-warning hover:bg-warning-dark",
+        info: "bg-alternative-cyan text-white border border-alternative-cyan hover:bg-alternative-cyan-dark",
+        light:
+          "bg-neutral-grey-200 text-gray-700 border border-neutral-grey-300 hover:bg-neutral-grey-300",
+        text: "bg-transparent text-gray-700 hover:bg-gray-100",
+        ghost:
+          "text-brand-primary bg-transparent border-none hover:bg-brand-primary-lightest",
+        link: "text-brand-primary underline hover:text-brand-primary-darkest",
       },
       size: {
-        default: "h-10 py-2",
-        sm: "h-8 py-2 text-xs",
-        lg: "h-12 py-4",
+        default: "text-base px-4 py-2",
+        sm: "text-sm px-3 py-1",
+        lg: "text-lg px-5 py-3",
+      },
+      outlined: {
+        true: "bg-transparent border-2",
+        false: "",
+      },
+      expanded: {
+        true: "w-full",
+        false: "",
+      },
+      disabled: {
+        true: "opacity-50 cursor-not-allowed",
+        false: "",
+      },
+      rounded: {
+        true: "rounded-full",
+        false: "rounded-md",
+      },
+      light: {
+        true: "bg-opacity-10",
+        false: "",
       },
     },
     defaultVariants: {
       variant: "default",
       size: "default",
+      outlined: false,
+      expanded: false,
+      disabled: false,
+      rounded: false,
+      light: false,
     },
+    compoundVariants: [
+      {
+        outlined: true,
+        variant: "primary",
+        class:
+          "text-brand-primary border-brand-primary hover:bg-brand-primary-lightest",
+      },
+      {
+        outlined: true,
+        variant: "secondary",
+        class:
+          "text-brand-secondary border-brand-secondary hover:bg-brand-secondary-lightest",
+      },
+      {
+        outlined: true,
+        variant: "success",
+        class: "text-success border-success hover:bg-success-light",
+      },
+      {
+        outlined: true,
+        variant: "danger",
+        class: "text-danger border-danger hover:bg-danger-light",
+      },
+      {
+        outlined: true,
+        variant: "warning",
+        class: "text-warning border-warning hover:bg-warning-light",
+      },
+      {
+        outlined: true,
+        variant: "info",
+        class:
+          "text-alternative-cyan border-alternative-cyan hover:bg-alternative-cyan-light",
+      },
+      {
+        outlined: true,
+        variant: "light",
+        class:
+          "text-gray-700 border-neutral-grey-300 hover:bg-neutral-grey-200",
+      },
+      {
+        outlined: true,
+        variant: "text",
+        class: "text-gray-700 border-transparent hover:bg-gray-100",
+      },
+      {
+        light: true,
+        variant: "primary",
+        class:
+          "bg-brand-primary-light text-brand-primary hover:bg-brand-primary-lightest",
+      },
+      {
+        light: true,
+        variant: "secondary",
+        class:
+          "bg-brand-secondary-light text-brand-secondary hover:bg-brand-secondary-lightest",
+      },
+      {
+        light: true,
+        variant: "success",
+        class: "bg-success-light text-success hover:bg-success-lighter",
+      },
+      {
+        light: true,
+        variant: "danger",
+        class: "bg-danger-light text-danger hover:bg-danger-lighter",
+      },
+      {
+        light: true,
+        variant: "warning",
+        class: "bg-warning-light text-warning hover:bg-warning-lighter",
+      },
+      {
+        light: true,
+        variant: "info",
+        class:
+          "bg-alternative-cyan-light text-alternative-cyan hover:bg-alternative-cyan-lighter",
+      },
+      {
+        disabled: true,
+        class: "opacity-50 cursor-not-allowed",
+      },
+    ],
   }
 );
 

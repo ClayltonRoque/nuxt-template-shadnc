@@ -4,6 +4,12 @@ import tailwindcss from "@tailwindcss/vite";
 export default defineNuxtConfig({
   compatibilityDate: "2025-05-15",
   devtools: { enabled: true },
+
+  components: [
+    { path: "~/components/adapters", pathPrefix: false, prefix: "b" },
+    "~/components",
+  ],
+
   css: [path.resolve(__dirname, "assets", "css/main.css")],
 
   vite: {
@@ -15,7 +21,7 @@ export default defineNuxtConfig({
     /**
      * Prefix for all the imported component
      */
-    prefix: "Fb",
+    prefix: "fb",
     /**
      * Directory that the component lives in.
      * @default "./components/ui"
