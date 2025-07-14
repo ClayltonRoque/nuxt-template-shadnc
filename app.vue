@@ -1,5 +1,6 @@
 <script setup lang="ts">
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
+import BCard from "~/components/adapters/Card.vue";
+import Tabs from "~/components/adapters/Tabs.vue";
 </script>
 
 <template>
@@ -15,12 +16,6 @@ import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
         <div
           class="text-xs font-bold text-neutral-grey-05 mb-2 uppercase tracking-widest"
         ></div>
-
-        <b-button
-          >Adapter
-
-          <template #icon-left><div>test</div></template>
-        </b-button>
 
         <div
           class="text-xs font-bold text-neutral-grey-05 mb-2 uppercase tracking-widest"
@@ -40,7 +35,7 @@ import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
           <fb-Button variant="default" outlined>Outlined Default</fb-Button>
           <fb-Button variant="primary" outlined>Outlined Primary</fb-Button>
           <fb-Button variant="secondary" outlined>Outlined Secondary</fb-Button>
-          <fb-Button variant="success" outlined>Outlined Success</fb-Button>
+          <fb-Button variant="success" disabled>Outlined Success</fb-Button>
           <fb-Button variant="info" outlined>Outlined Info</fb-Button>
           <fb-Button variant="warning" outlined>Outlined Warning</fb-Button>
           <fb-Button variant="danger" outlined>Outlined Danger</fb-Button>
@@ -70,30 +65,82 @@ import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
           >
         </div>
       </section>
-    </div>
 
-    <section class="mt-12">
-      <h2 class="text-3xl font-bold text-neutral-grey-08 mb-2">TABS</h2>
-      <Tabs default-value="books" class="w-full">
-        <TabsList>
-          <TabsTrigger value="pictures">Pictures</TabsTrigger>
-          <TabsTrigger value="music">Music</TabsTrigger>
-          <TabsTrigger value="books">Books</TabsTrigger>
-          <TabsTrigger value="videos">Videos</TabsTrigger>
-        </TabsList>
-        <TabsContent value="pictures">
-          <div class="pt-6 m-2">Pictures content</div>
-        </TabsContent>
-        <TabsContent value="music">
-          <div class="pt-6 m-2">Music content</div>
-        </TabsContent>
-        <TabsContent value="books">
-          <div class="pt-6 m-2">Books content</div>
-        </TabsContent>
-        <TabsContent value="videos">
-          <div class="pt-6 m-2">Videos content</div>
-        </TabsContent>
-      </Tabs>
-    </section>
+      <section class="mt-12">
+        <h2 class="text-3xl font-bold text-neutral-grey-08 mb-2">Card</h2>
+        <div class="flex justify-center gap-8">
+          <BCard variant="default" shadow padding="md">
+            <div
+              class="bg-neutral-300 flex items-center justify-center w-full h-56"
+            >
+              <span class="text-neutral-500 text-2xl font-bold">1280×960</span>
+            </div>
+            <div class="flex flex-row gap-4 p-4">
+              <img
+                src="https://placehold.co/48x48"
+                alt="avatar"
+                class="rounded bg-neutral-200 w-12 h-12"
+              />
+              <div>
+                <div class="font-bold text-lg leading-tight">
+                  John Smith
+                  <span class="font-normal text-neutral-400 text-base"
+                    >@johnsmith</span
+                  >
+                </div>
+                <div class="text-neutral-400 text-sm mt-1">
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                  Phasellus nec iaculis mauris.
+                  <a href="#" class="text-blue-400 hover:underline">@bulmaio</a
+                  >. <a href="#" class="text-blue-400 hover:underline">#css</a>
+                  <a href="#" class="text-blue-400 hover:underline"
+                    >#responsive</a
+                  >
+                </div>
+                <div class="text-neutral-600 text-xs mt-2">
+                  11:09 PM - 1 Jan 2016
+                </div>
+              </div>
+            </div>
+          </BCard>
+          <BCard variant="primary" shadow padding="md">
+            <div
+              class="bg-neutral-300 flex items-center justify-center w-full h-56"
+            >
+              <span class="text-2xl font-bold">1280×960</span>
+            </div>
+            <div class="flex flex-row gap-4 p-4">
+              <img
+                src="https://placehold.co/48x48"
+                alt="avatar"
+                class="rounded bg-neutral-200 w-12 h-12"
+              />
+              <div>
+                <div class="font-bold text-lg leading-tight">
+                  John Smith
+                  <span class="font-normal text-base">@johnsmith</span>
+                </div>
+                <div class="text-sm mt-1">
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                  Phasellus nec iaculis mauris.
+                  <a href="#" class="text-blue-400 hover:underline">@bulmaio</a
+                  >. <a href="#" class="text-blue-400 hover:underline">#css</a>
+                  <a href="#" class="text-blue-400 hover:underline"
+                    >#responsive</a
+                  >
+                </div>
+                <div class="text-xs mt-2">11:09 PM - 1 Jan 2016</div>
+              </div>
+            </div>
+          </BCard>
+        </div>
+      </section>
+      <section class="mt-12">
+        <h2 class="text-3xl font-bold text-neutral-grey-08 mb-2">Tabs</h2>
+        <div class="flex justify-center gap-8">
+          <Tabs activeTab="home" :vertical="false" />
+        </div>
+      </section>
+    </div>
   </div>
 </template>
