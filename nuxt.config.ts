@@ -1,5 +1,14 @@
+import { createLogger } from "vite";
 import path from "path";
 import tailwindcss from "@tailwindcss/vite";
+
+const SCSS_Logger = {
+  warn() {
+    return;
+  },
+};
+
+const logger = createLogger("error", { prefix: "custom" });
 
 export default defineNuxtConfig({
   compatibilityDate: "2025-05-15",
@@ -10,10 +19,17 @@ export default defineNuxtConfig({
     "~/components",
   ],
 
-  css: [path.resolve(__dirname, "assets", "css/main.css")],
+  css: [path.resolve(__dirname, "assets", "styles/_main.scss")],
 
   vite: {
     plugins: [tailwindcss()],
+    css: {
+      preprocessorOptions: {
+        scss: {
+          logger: SCSS_Logger,
+        },
+      },
+    },
   },
 
   modules: ["shadcn-nuxt"],

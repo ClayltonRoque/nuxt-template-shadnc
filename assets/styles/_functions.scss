@@ -1,0 +1,23 @@
+@function to_rem($number) {
+  $body: $body-size / 1px;
+  @return ($number / $body) * 1rem;
+}
+
+@function calculate_ratio_between_widescreen_and_fullhd() {
+  $n1: $widescreen / 1px; // convert to number
+  $n2: $fullhd / 1px; // convert to number
+  @return ($n1 / $n2);
+}
+
+@function calculate_percentage_font-size_in_fullhd($max) {
+  $screen: $fullhd / 1px; // convert to number
+  @return ($max / $screen);
+}
+
+@function calculate_min($max) {
+  @return $max * calculate_ratio_between_widescreen_and_fullhd();
+}
+
+@function calculate_font-size_value($max) {
+  @return calculate_percentage_font-size_in_fullhd($max) * 100vw;
+}

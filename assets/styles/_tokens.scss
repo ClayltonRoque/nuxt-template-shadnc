@@ -1,0 +1,109 @@
+/**
+*
+* Colors
+*
+**/
+
+$color-brand-primary: #047bd4;
+$color-brand-primary-darkest: #054f84;
+$color-brand-primary-medium: #98caf0;
+$color-brand-primary-light: #d3e8f8;
+$color-brand-primary-lightest: #eff8ff;
+
+$color-brand-secondary: #129b93;
+$color-brand-secondary-darkest: #0a6d67;
+$color-brand-secondary-medium: #15b5ab;
+$color-brand-secondary-light: #aae5e2;
+$color-brand-secondary-lightest: #d9f3f2;
+
+$color-neutral-grey-08: #0d1628;
+$color-neutral-grey-07: #1d2639;
+$color-neutral-grey-06: #313f58;
+$color-neutral-grey-05: #6f7d9b;
+$color-neutral-grey-04: #a0abc2;
+$color-neutral-grey-03: #cdd5e7;
+$color-neutral-grey-02: #dee4ef;
+$color-neutral-grey-01: #f1f5fa;
+
+$color-neutral-grey-lightest: #f9fafd;
+$color-neutral-grey: #fefeff;
+
+$color-danger: #f03434;
+$color-success: #00af27;
+$color-warning: #ffa900;
+
+$color-alternative-pink: #e91e63;
+$color-alternative-purple: #9c27b0;
+$color-alternative-lime: #c0ca33;
+$color-alternative-orange: #ff5722;
+$color-alternative-cyan: #00bcd4;
+$color-alternative-brown: #c78875;
+$color-alternative-yellow: #e4ae2f;
+
+$color-gradient-secondary-from: #0d1628;
+$color-gradient-secondary-to: #004d88;
+
+$color-gradient-secondary: linear-gradient(
+  180deg,
+  $color-gradient-secondary-from 50.52%,
+  $color-gradient-secondary-to 100%
+);
+
+/**
+*
+* Typography
+*
+**/
+
+$font-family-primary: "Mulish", sans-serif;
+$font-family-secondary: "Lato", sans-serif;
+
+$font-line-height-normal: 1;
+$font-line-height-medium: 1.2;
+$font-line-height-distant: 1.5;
+$font-line-height-extra-distant: 2;
+
+$font-weight-black: 900;
+$font-weight-extrabold: 800;
+$font-weight-bold: 700;
+$font-weight-medium: 500;
+$font-weight-regular: 400;
+$font-weight-light: 300;
+
+$font-size-h1: 60px;
+$font-size-h2: 48px;
+$font-size-h3: 36px;
+$font-size-h4: 24px;
+$font-size-h5: 20px;
+$font-size-h6: 18px;
+$font-size-h7: 14px;
+$font-size-h8: 12px;
+$font-size-h9: 10px;
+
+$font-legend: 11px;
+
+/**
+*
+* Shapes Styles
+*
+**/
+
+$style-shadow-01: 3px 1px 6px rgba(77, 157, 229, 0.18);
+$style-shadow-02: 3px 1px 12px rgba(77, 157, 229, 0.18);
+$style-shadow-03: 3px 1px 18px rgba(77, 157, 230, 0.18);
+
+$style-opacity-01: 20%;
+$style-opacity-02: 40%;
+$style-opacity-03: 60%;
+$style-opacity-04: 80%;
+
+$style-radius-none: 0px;
+$style-radius-tiny: 4px;
+$style-radius-small: 10px;
+$style-radius-medium: 16px;
+$style-radius-big: 100%;
+
+$style-radius-none: 0px;
+$style-radius-thin: 1px;
+$style-radius-thick: 2px;
+$style-radius-heavy: 4px;

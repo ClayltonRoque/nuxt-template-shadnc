@@ -1,0 +1,163 @@
+// Import Bulma's core
+@import "bulma/sass/utilities/all";
+@import "_tokens"; // Set your colors
+
+$primary: $color-brand-primary;
+$primary-light: $color-brand-primary-light;
+$primary-medium: $color-brand-primary-medium;
+$primary-dark: $color-brand-primary-darkest;
+$primary-invert: findColorInvert($primary);
+
+$secondary: $color-brand-secondary;
+$secondary-light: $color-brand-secondary-light;
+$secondary-medium: $color-brand-secondary-medium;
+$secondary-dark: $color-brand-secondary-darkest;
+$secondary-invert: findColorInvert($secondary);
+
+$success: $color-success;
+$danger: $color-danger;
+$warning: $color-warning;
+
+// Lists and maps
+$custom-colors: null !default;
+$custom-shades: null !default;
+
+$black: $color-neutral-grey-08;
+$black-bis: $black;
+$black-ter: $color-neutral-grey-07;
+
+$white: #ffffff;
+$white-bis: $color-neutral-grey;
+$white-ter: $color-neutral-grey-lightest;
+
+$grey-darker: $color-neutral-grey-06;
+$grey-dark: $color-neutral-grey-05;
+$grey: $color-neutral-grey-04;
+$grey-light: $color-neutral-grey-03;
+$grey-lighter: $color-neutral-grey-02;
+$grey-lightest: $color-neutral-grey-01;
+
+$text: $color-neutral-grey-06;
+$text-strong: $color-neutral-grey-06;
+
+// Setup $colors to use as bulma classes (e.g. 'is-twitter')
+$colors: mergeColorMaps(
+  (
+    "white": (
+      $white,
+      $black,
+    ),
+    "black": (
+      $black,
+      $white,
+    ),
+    "light": (
+      $light,
+      $light-invert,
+    ),
+    "dark": (
+      $dark,
+      $dark-invert,
+    ),
+    "primary": (
+      $primary,
+      $primary-invert,
+      $primary-light,
+      $primary-dark,
+    ),
+    "secondary": (
+      $secondary,
+      $secondary-invert,
+      $secondary-light,
+      $secondary-dark,
+    ),
+    "link": (
+      $link,
+      $link-invert,
+      $link-light,
+      $link-dark,
+    ),
+    "success": (
+      $success,
+      findColorInvert($success),
+      findLightColor($success),
+      findLightColor($success),
+      findDarkColor($success),
+    ),
+    "warning": (
+      $warning,
+      findColorInvert($warning),
+      findLightColor($warning),
+      findLightColor($warning),
+      findDarkColor($warning),
+    ),
+    "danger": (
+      $danger,
+      findColorInvert($danger),
+      findLightColor($danger),
+      findDarkColor($danger),
+    ),
+    "text": (
+      $text,
+      findColorInvert($text),
+    ),
+    "neutral": (
+      $grey-light,
+      findColorInvert($grey-light),
+    ),
+  ),
+  $custom-colors
+);
+
+$shades: mergeColorMaps(
+  (
+    "black-bis": $black-bis,
+    "black-ter": $black-ter,
+    "grey-darker": $grey-darker,
+    "grey-dark": $grey-dark,
+    "grey": $grey,
+    "grey-light": $grey-light,
+    "grey-lighter": $grey-lighter,
+    "grey-lightest": $grey-lightest,
+    "white-ter": $white-ter,
+    "white-bis": $white-bis,
+  ),
+  $custom-shades
+);
+
+// Links
+$link: $primary;
+$link-invert: $primary-invert;
+$link-focus-border: $primary;
+
+$disciplines: (
+  "atualidades": $color-alternative-pink,
+);
+
+// Disciplines Colors
+
+$discipline-blue: $color-alternative-cyan;
+$discipline-green: $color-brand-secondary;
+$discipline-orange: $color-alternative-orange;
+$discipline-red: $color-alternative-pink;
+$discipline-purple: $color-alternative-purple;
+$discipline-lime: $color-alternative-lime;
+
+$disciplines-colors: (
+  revisao: $discipline-red,
+  matematica: $discipline-red,
+  biologia: $discipline-purple,
+  quimica: $discipline-purple,
+  fisica: $discipline-purple,
+  historia: $discipline-orange,
+  geografia: $discipline-orange,
+  filosofia-e-sociologia: $discipline-orange,
+  filosofia: $discipline-orange,
+  atualidades: $discipline-purple,
+  sociologia: $discipline-blue,
+  portugues: $discipline-blue,
+  ingles: $discipline-blue,
+  espanhol: $discipline-blue,
+  fasciculos: $discipline-lime,
+  redacao: $discipline-lime,
+);

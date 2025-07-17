@@ -1,0 +1,141 @@
+@import "bulma/sass/utilities/all";
+@import "colors";
+@import "_tokens"; // Set your colors
+
+// Layout
+$body-size: 16px;
+$body-line-height: 1.4;
+$gap: 8px;
+$navbar-height: 4.5rem;
+$aside-width: 240px;
+$aside-width-mobile: 300px;
+
+$body-overflow-x: hidden;
+$body-overflow-y: auto;
+
+$block-spacing: $gap * 0.5;
+
+// Typhografy
+$family-primary: $font-family-primary;
+$family-secondary: $font-family-secondary;
+
+$size-1: $font-size-h1;
+$size-2: $font-size-h2;
+$size-3: $font-size-h3;
+$size-4: $font-size-h4;
+$size-5: $font-size-h5;
+$size-6: $font-size-h6;
+$size-7: $font-size-h7;
+$size-8: $font-size-h8;
+$size-9: $font-size-h9;
+
+$sizes: (
+  $size-1,
+  $size-2,
+  $size-3,
+  $size-4,
+  $size-5,
+  $size-6,
+  $size-7,
+  $size-8,
+  $size-9
+);
+
+$size-small: $font-size-h8;
+$size-normal: $font-size-h7;
+$size-medium: $font-size-h7;
+
+$title-size: $font-size-h6;
+$title-color: $color-neutral-grey-06;
+$title-weight: $font-weight-extrabold;
+$title-line-height: $body-line-height;
+$subtitle-size: 1rem;
+
+$weight-light: $font-weight-light;
+$weight-normal: $font-weight-regular;
+$weight-medium: $font-weight-medium;
+$weight-semibold: $font-weight-bold;
+$weight-bold: $font-weight-extrabold;
+
+// Shapes Styles
+$shadow: $style-shadow-03;
+
+$scrollbar-width: 0.6rem;
+
+$radius-small: 0.25rem;
+$radius: 0.25rem;
+$radius-medium: 1rem;
+$radius-large: 1.5rem;
+
+// Media Querie
+$fullhd: 1660px;
+
+$container-max-width: $widescreen;
+
+// Menu
+$menu-list-link-padding: 1rem 1.5rem;
+
+// Controls
+$controls-sizes: ("small", "normal", "medium");
+$complete-sizes: ("small", "normal", "medium", "large");
+
+// Buttons
+$button-padding-vertical: 0.5rem;
+$button-padding-horizontal: 1.5rem;
+$button-focus-box-shadow-size: 0px;
+$button-ghost-background-hover: $color-neutral-grey-01;
+$button-ghost-hover-decoration: none;
+$button-disabled-background-color: $color-neutral-grey-01;
+$button-disabled-border-color: $color-neutral-grey-01;
+$button-disabled-shadow: none;
+$button-disabled-opacity: 1;
+
+// Tags
+$tag-background-color: $color-brand-primary-lightest;
+
+// Cards
+$card-mobile-width: 257px;
+$card-radius: $style-radius-small;
+
+// Inputs
+$input-border-color: $grey;
+$input-icon-color: $input-border-color;
+$input-focus-box-shadow-size: 0px 0px 0px;
+$switch-width-number: 2.35;
+
+// Checkbox
+$checkbox-border-width: 1px;
+
+// Dropdown
+$dropdown-content-max-height: 172px;
+
+// Tabs
+$tabs-border-bottom-color: $grey-light;
+$tabs-link-active-border-bottom-color: $tabs-border-bottom-color;
+$tabs-link-hover-border-bottom-color: $tabs-border-bottom-color;
+$tabs-link-padding: 0.5rem 1.5rem 1.5rem;
+
+// Dropdown
+$dropdown-content-offset: $gap;
+$dropdown-content-padding-left: 2rem;
+$dropdown-content-padding-top: 1rem;
+$dropdown-content-padding-bottom: 1rem;
+
+// Progress Bar
+$progress-bar-background-color: $color-neutral-grey-02;
+
+// Spacing
+$spacing-values: (
+  "0": 0,
+  "1": 0.5rem,
+  "2": 0.75rem,
+  "3": 1rem,
+  "4": 1.5rem,
+  "5": 2rem,
+  "6": 3rem,
+  "auto": auto,
+) !default;
+
+$small-device: 550px;
+
+$icomoon-icon-path: "~/assets/fonts";
